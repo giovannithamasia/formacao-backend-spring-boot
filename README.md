@@ -24,9 +24,9 @@ O versionamento deste repositório teve início a partir do **Módulo 5 da forma
 
 Os módulos anteriores já haviam sido concluídos antes do início do versionamento e abordaram os seguintes temas:
 
--Primeiro passos com Spring Boot
--Arquitetura e Estrutura do Framework
--Acesso a dados com Spring Data Jpa
+- Primeiro Passos com Spring Boot
+- Arquitetura e Estrutura do Framework
+- Acesso a dados com Spring Data Jpa
 
 Dessa forma, o **commit inicial** representa o estado do projeto ao final desses módulos , e os commits seguintes passam a registrar a evolução continua 
 a partir do desenvolvimento de APIs RestFul.
