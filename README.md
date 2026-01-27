@@ -26,7 +26,7 @@ Os módulos anteriores já haviam sido concluídos antes do início do versionam
 
 - Primeiro Passos com Spring Boot
 - Arquitetura e Estrutura do Framework
-- Acesso a dados com Spring Data Jpa
+- Acesso a dados com Spring Data JPA
 
 Dessa forma, o **commit inicial** representa o estado do projeto ao final desses módulos , e os commits seguintes passam a registrar a evolução continua 
 a partir do desenvolvimento de APIs RestFul.
