@@ -1,6 +1,6 @@
 # Formação Backend Spring Boot 🧑🏻‍💻☕
 
-Repositório de estudos da **Formação Backend Java com Spring Boot**, reunindo conteúdos teóricos, exemplos práticos e projetos desenvolvidos ao longo do curso.
+Repositório de estudos da **Formação Backend Java com Spring Boot**, reunindo conteúdos teóricos, exemplos práticos e projetos desenvolvidos durante os estudos (**Udemy**).
 
 O objetivo deste repositório é consolidar o aprendizado em **Java e no ecossistema Spring**, seguindo boas práticas, organização clara e commits semânticos.
 
