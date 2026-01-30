@@ -31,8 +31,8 @@ public class AutorController {
 
         // http://localhost:8080/autores/d7846opyt
         URI location =
-                ServletUriComponentsBuilder.
-                fromCurrentContextPath()
+                ServletUriComponentsBuilder
+                .fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(autorEntidade.getId())
                 .toUri();
