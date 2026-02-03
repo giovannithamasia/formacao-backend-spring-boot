@@ -87,4 +87,6 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
     List<Livro> listarLivrosQuery(GeneroLivro genero,LocalDate inicio,
                                   LocalDate fim , BigDecimal precoInicial ,
                                   BigDecimal precoFinal);
+
+    boolean existsByAutor(Autor autor);
 }
