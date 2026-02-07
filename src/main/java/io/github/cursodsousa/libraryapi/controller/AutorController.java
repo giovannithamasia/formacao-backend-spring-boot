@@ -6,6 +6,7 @@ import io.github.cursodsousa.libraryapi.exceptions.OperacaoNaoPermitidaException
 import io.github.cursodsousa.libraryapi.exceptions.RegistroDuplicadoException;
 import io.github.cursodsousa.libraryapi.model.Autor;
 import io.github.cursodsousa.libraryapi.service.AutorService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +27,7 @@ public class AutorController {
     private final AutorService service;
 
     @PostMapping
-    public ResponseEntity<Object> salvar(@RequestBody AutorDTO autor){
+    public ResponseEntity<Object> salvar(@RequestBody @Valid AutorDTO autor){
         try {
             Autor autorEntidade = autor.mapearParaAutor();
             service.salvar(autorEntidade);
@@ -56,8 +57,8 @@ public class AutorController {
             AutorDTO dto = new AutorDTO(
                     autor.getId(),
                     autor.getNome(),
-                    autor.getNacionalidade(),
-                    autor.getDataNascimento());
+                    autor.getDataNascimento(),
+                    autor.getNacionalidade());
 
             return ResponseEntity.ok(dto);
         }
@@ -95,8 +96,8 @@ public class AutorController {
                 map(autor -> new AutorDTO(
                         autor.getId(),
                         autor.getNome(),
-                        autor.getNacionalidade(),
-                        autor.getDataNascimento())).
+                        autor.getDataNascimento(),
+                        autor.getNacionalidade())).
                 collect(Collectors.toList());
 
         return ResponseEntity.ok(lista);
@@ -104,7 +105,7 @@ public class AutorController {
 
     @PutMapping("{id}")
     public ResponseEntity<Object> atualizar (@PathVariable("id") String id,
-                                           @RequestBody AutorDTO dto){
+                                           @RequestBody @Valid AutorDTO dto){
         try {
             var idAutor = UUID.fromString(id);
             Optional<Autor> autorOptional = service.obterPorId(idAutor);
