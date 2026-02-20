@@ -1,7 +1,6 @@
 package io.github.cursodsousa.libraryapi.controller;
 
 import io.github.cursodsousa.libraryapi.controller.mappers.AutorMapper;
-import io.github.cursodsousa.libraryapi.controller.mappers.GenericController;
 import io.github.cursodsousa.libraryapi.dto.AutorDTO;
 import io.github.cursodsousa.libraryapi.model.Autor;
 import io.github.cursodsousa.libraryapi.service.AutorService;
